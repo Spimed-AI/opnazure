@@ -48,7 +48,7 @@ fi
 # 1. Package to get root certificate bundle from the Mozilla Project (FreeBSD)
 # 2. Install bash to support Azure Backup integration
 env IGNORE_OSVERSION=yes
-pkg bootstrap -f; pkg update -f
+pkg bootstrap -f -y; pkg update -f
 env ASSUME_ALWAYS_YES=YES pkg install ca_root_nss && pkg install -y bash
 
 #Download OPNSense Bootstrap and Permit Root Remote Login
@@ -68,6 +68,10 @@ cd WALinuxAgent-$3/
 python3 setup.py install --register-service --lnx-distro=freebsd --force
 cd ..
 
+# April 2024 Fixes - Create missing directories to resolve configureopnsense.sh failures
+mkdir -p /usr/local/opnsense/service/conf
+mkdir -p /usr/local/etc/rc.syshook.d/start
+
 # Fix waagent by replacing configuration settings
 ln -s /usr/local/bin/python3.9 /usr/local/bin/python
 ##sed -i "" 's/command_interpreter="python"/command_interpreter="python3"/' /etc/rc.d/waagent
@@ -75,9 +79,6 @@ ln -s /usr/local/bin/python3.9 /usr/local/bin/python
 sed -i "" 's/ResourceDisk.EnableSwap=y/ResourceDisk.EnableSwap=n/' /etc/waagent.conf
 fetch $1actions_waagent.conf
 cp actions_waagent.conf /usr/local/opnsense/service/conf/actions.d
-
-# Installing bash - This is a requirement for Azure custom Script extension to run
-pkg install -y bash
 
 # Remove wrong route at initialization
 cat > /usr/local/etc/rc.syshook.d/start/22-remoteroute <<EOL
