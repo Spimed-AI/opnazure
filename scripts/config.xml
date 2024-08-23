@@ -241,10 +241,18 @@
     <sudo_allow_wheel>1</sudo_allow_wheel>
     <serialspeed>115200</serialspeed>
     <primaryconsole>video</primaryconsole>
-    <ssh>
+     <ssh>
       <enabled>enabled</enabled>
-      <passwordauth>1</passwordauth>
-      <permitrootlogin>1</permitrootlogin>
+      <noauto>1</noauto>
+      <interfaces>lan,wan</interfaces>
+      <kex/>
+      <ciphers/>
+      <macs/>
+      <keys/>
+      <keysig/>
+      <rekeylimit/>
+      <group>admins</group>
+      <port>22</port>
     </ssh>
     <dns1gw>none</dns1gw>
     <dns2gw>none</dns2gw>
