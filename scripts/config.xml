@@ -253,6 +253,8 @@
       <rekeylimit/>
       <group>admins</group>
       <port>22</port>
+      <passwordauth>0</passwordauth>
+      <permitrootlogin>0</permitrootlogin>
     </ssh>
     <dns1gw>none</dns1gw>
     <dns2gw>none</dns2gw>
