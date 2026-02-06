@@ -2,186 +2,186 @@
 <opnsense>
   <version>11.2</version>
   <theme>opnsense</theme>
-  <sysctl>
-    <item>
-      <descr>Disable the pf ftp proxy handler.</descr>
+  <sysctl version="1.0.2" persisted_at="1770388644.49" description="System Tunables">
+    <item uuid="47d8dd7b-4a2d-4599-b42f-ab7c8fe0fd26">
       <tunable>debug.pfftpproxy</tunable>
-      <value>default</value>
+      <value/>
+      <descr>Disable the pf ftp proxy handler.</descr>
     </item>
-    <item>
-      <descr>Increase UFS read-ahead speeds to match current state of hard drives and NCQ. More information here: http://ivoras.sharanet.org/blog/tree/2010-11-19.ufs-read-ahead.html</descr>
+    <item uuid="5b157252-3da2-4e25-92eb-ab734ec2504d">
       <tunable>vfs.read_max</tunable>
-      <value>default</value>
+      <value/>
+      <descr>Increase UFS read-ahead speeds to match current state of hard drives and NCQ. More information here: http://ivoras.sharanet.org/blog/tree/2010-11-19.ufs-read-ahead.html</descr>
     </item>
-    <item>
-      <descr>Set the ephemeral port range to be lower.</descr>
+    <item uuid="b6913014-7bb7-46b1-9319-9db6136815f8">
       <tunable>net.inet.ip.portrange.first</tunable>
-      <value>default</value>
+      <value/>
+      <descr>Set the ephemeral port range to be lower.</descr>
     </item>
-    <item>
-      <descr>Drop packets to closed TCP ports without returning a RST</descr>
+    <item uuid="72c76071-781d-47c2-a44d-3cb74f249b5d">
       <tunable>net.inet.tcp.blackhole</tunable>
-      <value>default</value>
+      <value/>
+      <descr>Drop packets to closed TCP ports without returning a RST</descr>
     </item>
-    <item>
-      <descr>Do not send ICMP port unreachable messages for closed UDP ports</descr>
+    <item uuid="b2c28f23-1bb7-4649-973c-1eebf2e4b9e6">
       <tunable>net.inet.udp.blackhole</tunable>
-      <value>default</value>
+      <value/>
+      <descr>Do not send ICMP port unreachable messages for closed UDP ports</descr>
     </item>
-    <item>
-      <descr>Randomize the ID field in IP packets (default is 0: sequential IP IDs)</descr>
+    <item uuid="65196ed0-0e12-4ad1-a900-7f4fa7ef44f2">
       <tunable>net.inet.ip.random_id</tunable>
-      <value>default</value>
+      <value/>
+      <descr>Randomize the ID field in IP packets (default is 0: sequential IP IDs)</descr>
     </item>
-    <item>
-      <descr>
-        Source routing is another way for an attacker to try to reach non-routable addresses behind your box.
-        It can also be used to probe for information about your internal networks. These functions come enabled
-        as part of the standard FreeBSD core system.
-      </descr>
+    <item uuid="6d055bf9-55f2-438a-aad9-b1f851da62b6">
       <tunable>net.inet.ip.sourceroute</tunable>
-      <value>default</value>
-    </item>
-    <item>
+      <value/>
       <descr>
         Source routing is another way for an attacker to try to reach non-routable addresses behind your box.
         It can also be used to probe for information about your internal networks. These functions come enabled
         as part of the standard FreeBSD core system.
       </descr>
-      <tunable>net.inet.ip.accept_sourceroute</tunable>
-      <value>default</value>
     </item>
-    <item>
+    <item uuid="10843d29-6265-4a5b-afa3-c6e906939ed6">
+      <tunable>net.inet.ip.accept_sourceroute</tunable>
+      <value/>
+      <descr>
+        Source routing is another way for an attacker to try to reach non-routable addresses behind your box.
+        It can also be used to probe for information about your internal networks. These functions come enabled
+        as part of the standard FreeBSD core system.
+      </descr>
+    </item>
+    <item uuid="91716886-3996-472a-9c5c-f2ad927694b1">
+      <tunable>net.inet.icmp.drop_redirect</tunable>
+      <value/>
       <descr>
         Redirect attacks are the purposeful mass-issuing of ICMP type 5 packets. In a normal network, redirects
         to the end stations should not be required. This option enables the NIC to drop all inbound ICMP redirect
         packets without returning a response.
       </descr>
-      <tunable>net.inet.icmp.drop_redirect</tunable>
-      <value>default</value>
     </item>
-    <item>
+    <item uuid="e2054e2c-3897-4e2a-820e-21320fd7c2ae">
+      <tunable>net.inet.icmp.log_redirect</tunable>
+      <value/>
       <descr>
         This option turns off the logging of redirect packets because there is no limit and this could fill
         up your logs consuming your whole hard drive.
       </descr>
-      <tunable>net.inet.icmp.log_redirect</tunable>
-      <value>default</value>
     </item>
-    <item>
-      <descr>Drop SYN-FIN packets (breaks RFC1379, but nobody uses it anyway)</descr>
+    <item uuid="6fb65518-eafb-4f65-8a0c-6dc532333bab">
       <tunable>net.inet.tcp.drop_synfin</tunable>
-      <value>default</value>
+      <value/>
+      <descr>Drop SYN-FIN packets (breaks RFC1379, but nobody uses it anyway)</descr>
     </item>
-    <item>
-      <descr>Enable sending IPv4 redirects</descr>
+    <item uuid="d1d90115-07ee-4ae3-8727-73965d614cfd">
       <tunable>net.inet.ip.redirect</tunable>
-      <value>default</value>
+      <value/>
+      <descr>Enable sending IPv4 redirects</descr>
     </item>
-    <item>
-      <descr>Enable sending IPv6 redirects</descr>
+    <item uuid="b1e28aeb-bbf7-428f-9e68-2e4dcd98fc3d">
       <tunable>net.inet6.ip6.redirect</tunable>
-      <value>default</value>
+      <value/>
+      <descr>Enable sending IPv6 redirects</descr>
     </item>
-    <item>
-      <descr>Enable privacy settings for IPv6 (RFC 4941)</descr>
+    <item uuid="a93b2a76-7504-4877-8861-4dbb54b27c05">
       <tunable>net.inet6.ip6.use_tempaddr</tunable>
-      <value>default</value>
+      <value/>
+      <descr>Enable privacy settings for IPv6 (RFC 4941)</descr>
     </item>
-    <item>
-      <descr>Prefer privacy addresses and use them over the normal addresses</descr>
+    <item uuid="f0ea7e51-47ad-497d-8421-d052159e9e04">
       <tunable>net.inet6.ip6.prefer_tempaddr</tunable>
-      <value>default</value>
+      <value/>
+      <descr>Prefer privacy addresses and use them over the normal addresses</descr>
     </item>
-    <item>
-      <descr>Generate SYN cookies for outbound SYN-ACK packets</descr>
+    <item uuid="4363b726-a634-4c92-9045-ee6899dcc42f">
       <tunable>net.inet.tcp.syncookies</tunable>
-      <value>default</value>
+      <value/>
+      <descr>Generate SYN cookies for outbound SYN-ACK packets</descr>
     </item>
-    <item>
-      <descr>Maximum incoming/outgoing TCP datagram size (receive)</descr>
+    <item uuid="101f4aaa-0857-422e-8c84-efa6a2a76027">
       <tunable>net.inet.tcp.recvspace</tunable>
-      <value>default</value>
+      <value/>
+      <descr>Maximum incoming/outgoing TCP datagram size (receive)</descr>
     </item>
-    <item>
-      <descr>Maximum incoming/outgoing TCP datagram size (send)</descr>
+    <item uuid="086c15d1-a969-4362-a856-1f96d9bbb16b">
       <tunable>net.inet.tcp.sendspace</tunable>
-      <value>default</value>
+      <value/>
+      <descr>Maximum incoming/outgoing TCP datagram size (send)</descr>
     </item>
-    <item>
-      <descr>IP Fastforwarding</descr>
+    <item uuid="655693e4-4e1e-431d-98c8-41229ecb20c5">
       <tunable>net.inet.ip.fastforwarding</tunable>
-      <value>default</value>
+      <value/>
+      <descr>IP Fastforwarding</descr>
     </item>
-    <item>
-      <descr>Do not delay ACK to try and piggyback it onto a data packet</descr>
+    <item uuid="4292a28c-482b-4956-9693-3d9f91668495">
       <tunable>net.inet.tcp.delayed_ack</tunable>
-      <value>default</value>
+      <value/>
+      <descr>Do not delay ACK to try and piggyback it onto a data packet</descr>
     </item>
-    <item>
-      <descr>Maximum outgoing UDP datagram size</descr>
+    <item uuid="a508b487-575a-408f-baa0-b09b0a77a883">
       <tunable>net.inet.udp.maxdgram</tunable>
-      <value>default</value>
+      <value/>
+      <descr>Maximum outgoing UDP datagram size</descr>
     </item>
-    <item>
-      <descr>Handling of non-IP packets which are not passed to pfil (see if_bridge(4))</descr>
+    <item uuid="4be74568-7d19-4a35-8761-82c9a714a14e">
       <tunable>net.link.bridge.pfil_onlyip</tunable>
-      <value>default</value>
+      <value/>
+      <descr>Handling of non-IP packets which are not passed to pfil (see if_bridge(4))</descr>
     </item>
-    <item>
-      <descr>Set to 0 to disable filtering on the incoming and outgoing member interfaces.</descr>
+    <item uuid="c4b68a79-6ff4-43fc-8055-a6db36264037">
       <tunable>net.link.bridge.pfil_member</tunable>
-      <value>default</value>
+      <value/>
+      <descr>Set to 0 to disable filtering on the incoming and outgoing member interfaces.</descr>
     </item>
-    <item>
-      <descr>Set to 1 to enable filtering on the bridge interface</descr>
+    <item uuid="264c8e6c-18ce-4427-9891-5939e82e37bf">
       <tunable>net.link.bridge.pfil_bridge</tunable>
-      <value>default</value>
+      <value/>
+      <descr>Set to 1 to enable filtering on the bridge interface</descr>
     </item>
-    <item>
-      <descr>Allow unprivileged access to tap(4) device nodes</descr>
+    <item uuid="16181b99-6334-4b78-ab7a-842b66191c12">
       <tunable>net.link.tap.user_open</tunable>
-      <value>default</value>
+      <value/>
+      <descr>Allow unprivileged access to tap(4) device nodes</descr>
     </item>
-    <item>
-      <descr>Randomize PID's (see src/sys/kern/kern_fork.c: sysctl_kern_randompid())</descr>
+    <item uuid="88e9628e-3c6a-4e80-af46-ba3f481dc8d2">
       <tunable>kern.randompid</tunable>
-      <value>default</value>
+      <value/>
+      <descr>Randomize PID's (see src/sys/kern/kern_fork.c: sysctl_kern_randompid())</descr>
     </item>
-    <item>
-      <descr>Maximum size of the IP input queue</descr>
+    <item uuid="41f537fd-a057-446a-895b-1ef3a723b1cb">
       <tunable>net.inet.ip.intr_queue_maxlen</tunable>
-      <value>default</value>
+      <value/>
+      <descr>Maximum size of the IP input queue</descr>
     </item>
-    <item>
-      <descr>Disable CTRL+ALT+Delete reboot from keyboard.</descr>
+    <item uuid="4635b251-c400-4b42-b37e-bf9c73ea033b">
       <tunable>hw.syscons.kbd_reboot</tunable>
-      <value>default</value>
+      <value/>
+      <descr>Disable CTRL+ALT+Delete reboot from keyboard.</descr>
     </item>
-    <item>
-      <descr>Enable TCP extended debugging</descr>
+    <item uuid="3509cc44-fa2e-43d9-b988-4214b835beeb">
       <tunable>net.inet.tcp.log_debug</tunable>
-      <value>default</value>
+      <value/>
+      <descr>Enable TCP extended debugging</descr>
     </item>
-    <item>
-      <descr>Set ICMP Limits</descr>
+    <item uuid="7ecee5ab-d7f0-4253-ab96-6a6e61e362b9">
       <tunable>net.inet.icmp.icmplim</tunable>
-      <value>default</value>
+      <value/>
+      <descr>Set ICMP Limits</descr>
     </item>
-    <item>
-      <descr>TCP Offload Engine</descr>
+    <item uuid="501d9197-c41a-4503-b173-aac640a4c8a2">
       <tunable>net.inet.tcp.tso</tunable>
-      <value>default</value>
+      <value/>
+      <descr>TCP Offload Engine</descr>
     </item>
-    <item>
-      <descr>UDP Checksums</descr>
+    <item uuid="f3302951-5d4e-4ad5-907e-38a2cfe10f1c">
       <tunable>net.inet.udp.checksum</tunable>
-      <value>default</value>
+      <value/>
+      <descr>UDP Checksums</descr>
     </item>
-    <item>
-      <descr>Maximum socket buffer size</descr>
+    <item uuid="142517ae-21f4-4308-aed2-2f1fd958dd52">
       <tunable>kern.ipc.maxsockbuf</tunable>
-      <value>default</value>
+      <value/>
+      <descr>Maximum socket buffer size</descr>
     </item>
   </sysctl>
   <system>
@@ -189,22 +189,34 @@
     <hostname>OPNsense</hostname>
     <domain>localhost</domain>
     <dnsallowoverride>1</dnsallowoverride>
-    <group>
+    <group uuid="6cf0c4b2-f1e1-4f78-975e-27f277649e8c">
       <name>admins</name>
       <description>System Administrators</description>
       <scope>system</scope>
       <gid>1999</gid>
       <member>0</member>
-      <priv>user-shell-access</priv>
-      <priv>page-all</priv>
+      <priv>user-shell-access,page-all</priv>
+      <source_networks/>
     </group>
-    <user>
-      <name>root</name>
-      <descr>System Administrator</descr>
-      <scope>system</scope>
-      <groupname>admins</groupname>
-      <password>$2b$10$YRVoF4SgskIsrXOvOQjGieB9XqHPRra9R7d80B3BZdbY/j21TwBfS</password>
+    <user uuid="d16bbcd1-6dd1-4202-9867-6fba3936ed91">
       <uid>0</uid>
+      <name>root</name>
+      <disabled>0</disabled>
+      <scope>system</scope>
+      <expires/>
+      <authorizedkeys/>
+      <otp_seed/>
+      <shell/>
+      <password>$2b$10$YRVoF4SgskIsrXOvOQjGieB9XqHPRra9R7d80B3BZdbY/j21TwBfS</password>
+      <pwd_changed_at/>
+      <landing_page/>
+      <comment/>
+      <email/>
+      <apikeys/>
+      <priv/>
+      <language/>
+      <descr>System Administrator</descr>
+      <dashboard/>
     </user>
     <nextuid>2000</nextuid>
     <nextgid>2000</nextgid>
@@ -214,19 +226,17 @@
     <webgui>
       <protocol>https</protocol>
       <ssl-certref>598102500f355</ssl-certref>
-      <port/>
+      <port>1443</port>
       <ssl-ciphers/>
       <compression/>
       <nohttpreferercheck>1</nohttpreferercheck>
       <noantilockout>1</noantilockout>
+      <interfaces/>
+      <disablehttpredirect>1</disablehttpredirect>
     </webgui>
     <disablenatreflection>yes</disablenatreflection>
     <usevirtualterminal>1</usevirtualterminal>
     <disableconsolemenu>1</disableconsolemenu>
-    <disablechecksumoffloading>1</disablechecksumoffloading>
-    <disablesegmentationoffloading>1</disablesegmentationoffloading>
-    <disablelargereceiveoffloading>1</disablelargereceiveoffloading>
-    <ipv6allow/>
     <powerd_ac_mode>hadp</powerd_ac_mode>
     <powerd_battery_mode>hadp</powerd_battery_mode>
     <powerd_normal_mode>hadp</powerd_normal_mode>
@@ -264,6 +274,14 @@
     <dns6gw>none</dns6gw>
     <dns7gw>none</dns7gw>
     <dns8gw>none</dns8gw>
+    <firmware version="1.0.1" persisted_at="1770388643.89" description="Firmware settings">
+      <mirror/>
+      <flavour/>
+      <plugins/>
+      <type/>
+      <subscription/>
+      <reboot>0</reboot>
+    </firmware>
   </system>
   <interfaces>
     <wan>
@@ -317,12 +335,19 @@
       <adv_dhcp_config_file_override/>
       <adv_dhcp_config_file_override_path/>
     </lan>
+    <lo0>
+      <internal_dynamic>1</internal_dynamic>
+      <descr>Loopback</descr>
+      <enable>1</enable>
+      <if>lo0</if>
+      <ipaddr>127.0.0.1</ipaddr>
+      <ipaddrv6>::1</ipaddrv6>
+      <subnet>8</subnet>
+      <subnetv6>128</subnetv6>
+      <type>none</type>
+      <virtual>1</virtual>
+    </lo0>
   </interfaces>
-  <unbound>
-    <enable>1</enable>
-    <dnssec>1</dnssec>
-    <dnssecstripped>1</dnssecstripped>
-  </unbound>
   <snmpd>
     <syslocation/>
     <syscontact/>
@@ -332,7 +357,7 @@
     <reverse/>
   </syslog>
   <filter>
-    <rule>
+    <rule uuid="d8b661fa-135b-4ee9-ad1a-e87b67fff82e">
       <type>pass</type>
       <interface>wan</interface>
       <ipprotocol>inet</ipprotocol>
@@ -343,7 +368,7 @@
       </source>
       <destination>
         <network>wanip</network>
-        <port>443</port>
+        <port>1443</port>
       </destination>
       <updated>
         <username>root@187.143.37.51</username>
@@ -356,7 +381,7 @@
         <description>/firewall_rules_edit.php made changes</description>
       </created>
     </rule>
-    <rule>
+    <rule uuid="f41a90b2-942f-43f6-be04-78953fef2b7e">
       <type>pass</type>
       <interface>wan</interface>
       <ipprotocol>inet</ipprotocol>
@@ -470,7 +495,7 @@
     <cron version="1.0.0">
       <jobs/>
     </cron>
-    <Netflow version="1.0.0">
+    <Netflow version="1.0.1" persisted_at="1770388643.66" description="NetFlow configuration">
       <capture>
         <interfaces/>
         <egress_only>wan</egress_only>
@@ -480,23 +505,49 @@
       <collect>
         <enable>0</enable>
       </collect>
+      <activeTimeout>1800</activeTimeout>
+      <inactiveTimeout>15</inactiveTimeout>
     </Netflow>
-    <IDS version="1.0.0">
+    <IDS version="1.1.2" persisted_at="1770388644.97" description="Intrusion detection">
       <rules/>
+      <policies/>
       <userDefinedRules/>
       <files/>
       <fileTags/>
       <general>
         <enabled>0</enabled>
-        <ips>0</ips>
+        <mode>pcap</mode>
+        <divert_listeners>1</divert_listeners>
         <promisc>0</promisc>
         <interfaces>wan</interfaces>
+        <homenet>192.168.0.0/16,10.0.0.0/8,172.16.0.0/12</homenet>
         <defaultPacketSize/>
         <UpdateCron/>
         <AlertLogrotate>W0D23</AlertLogrotate>
         <AlertSaveLogs>4</AlertSaveLogs>
         <MPMAlgo>ac</MPMAlgo>
+        <detect>
+          <Profile/>
+          <toclient_groups/>
+          <toserver_groups/>
+        </detect>
         <syslog>0</syslog>
+        <syslog_eve>0</syslog_eve>
+        <LogPayload>0</LogPayload>
+        <verbosity/>
+        <eveLog>
+          <http>
+            <enable>0</enable>
+            <extended>0</extended>
+            <dumpAllHeaders/>
+          </http>
+          <tls>
+            <enable>0</enable>
+            <extended>0</extended>
+            <sessionResumption>0</sessionResumption>
+            <custom/>
+          </tls>
+        </eveLog>
       </general>
     </IDS>
     <proxy version="1.0.0">
@@ -588,7 +639,7 @@
         </authentication>
       </forward>
     </proxy>
-    <TrafficShaper version="1.0.1">
+    <TrafficShaper version="1.0.3" persisted_at="1770388645.13" description="Traffic shaper">
       <pipes/>
       <queues/>
       <rules/>
@@ -600,13 +651,597 @@
       <Category version="1.0.0">
         <categories/>
       </Category>
-      <Alias version="1.0.0">
+      <Alias version="1.0.1" persisted_at="1770388645.11" description="Firewall aliases">
         <geoip>
           <url/>
         </geoip>
         <aliases/>
       </Alias>
+      <Filter version="1.0.4" persisted_at="1770388645.11" description="Firewall rules (new)">
+        <rules/>
+        <snatrules/>
+        <npt/>
+        <onetoone/>
+      </Filter>
     </Firewall>
+    <Syslog version="1.0.2" persisted_at="1770388643.66" description="System logging settings">
+      <general>
+        <enabled>1</enabled>
+        <loglocal>1</loglocal>
+        <maxpreserve>31</maxpreserve>
+        <maxfilesize/>
+      </general>
+      <destinations/>
+    </Syslog>
+    <Swanctl version="1.0.0" persisted_at="1770388643.76" description="IPsec connections">
+      <Connections/>
+      <locals/>
+      <remotes/>
+      <children/>
+      <Pools/>
+      <VTIs/>
+      <SPDs/>
+    </Swanctl>
+    <IPsec version="1.0.5" persisted_at="1770388643.77" description="IPsec settings">
+      <general>
+        <enabled/>
+        <preferred_oldsa>0</preferred_oldsa>
+        <disablevpnrules>0</disablevpnrules>
+        <passthrough_networks/>
+        <user_source/>
+        <local_group/>
+      </general>
+      <charon>
+        <max_ikev1_exchanges/>
+        <threads>16</threads>
+        <ikesa_table_size>32</ikesa_table_size>
+        <ikesa_table_segments>4</ikesa_table_segments>
+        <init_limit_half_open>1000</init_limit_half_open>
+        <ignore_acquire_ts>1</ignore_acquire_ts>
+        <install_routes>0</install_routes>
+        <cisco_unity>0</cisco_unity>
+        <make_before_break>0</make_before_break>
+        <retransmit_tries/>
+        <retransmit_timeout/>
+        <retransmit_base/>
+        <retransmit_jitter/>
+        <retransmit_limit/>
+        <reqid_base/>
+        <syslog>
+          <daemon>
+            <ike_name>1</ike_name>
+            <log_level>0</log_level>
+            <app>1</app>
+            <asn>1</asn>
+            <cfg>1</cfg>
+            <chd>1</chd>
+            <dmn>1</dmn>
+            <enc>1</enc>
+            <esp>1</esp>
+            <ike>1</ike>
+            <imc>1</imc>
+            <imv>1</imv>
+            <job>1</job>
+            <knl>1</knl>
+            <lib>1</lib>
+            <mgr>1</mgr>
+            <net>1</net>
+            <pts>1</pts>
+            <tls>1</tls>
+            <tnc>1</tnc>
+          </daemon>
+        </syslog>
+        <plugins>
+          <attr>
+            <subnet/>
+            <split-include/>
+            <x_28674/>
+            <x_28675/>
+            <x_28672/>
+            <x_28673>0</x_28673>
+            <x_28679/>
+            <dns/>
+            <nbns/>
+          </attr>
+          <eap-radius>
+            <servers/>
+            <accounting>0</accounting>
+            <class_group>0</class_group>
+          </eap-radius>
+          <xauth-pam>
+            <pam_service>ipsec</pam_service>
+            <session>0</session>
+            <trim_email>1</trim_email>
+          </xauth-pam>
+        </plugins>
+      </charon>
+      <keyPairs/>
+      <preSharedKeys/>
+    </IPsec>
+    <DHCRelay version="1.0.1" persisted_at="1770388643.77" description="DHCRelay configuration"/>
+    <Interfaces>
+      <neighbors version="1.0.0" persisted_at="1770388643.78" description="Neighbor configuration"/>
+      <vxlans version="1.0.2" persisted_at="1770388643.79" description="VXLAN configuration"/>
+      <loopbacks version="1.0.0" persisted_at="1770388643.83" description="Loopback configuration"/>
+      <settings version="1.0.0" persisted_at="1770388643.84" description="Global interface settings">
+        <disablechecksumoffloading>1</disablechecksumoffloading>
+        <disablesegmentationoffloading>1</disablesegmentationoffloading>
+        <disablelargereceiveoffloading>1</disablelargereceiveoffloading>
+        <disablevlanhwfilter>2</disablevlanhwfilter>
+        <disableipv6>0</disableipv6>
+        <dhcp6_norelease>0</dhcp6_norelease>
+        <dhcp6_debug>0</dhcp6_debug>
+        <dhcp6_duid/>
+        <dhcp6_ratimeout>10</dhcp6_ratimeout>
+      </settings>
+    </Interfaces>
+    <radvd version="1.0.0" persisted_at="1770388644.49" description="Radvd configuration"/>
+    <trust>
+      <general version="1.0.1" persisted_at="1770388644.65" description="Trust general settings">
+        <store_intermediate_certs>0</store_intermediate_certs>
+        <install_crls>0</install_crls>
+        <fetch_crls>0</fetch_crls>
+        <enable_legacy_sect>1</enable_legacy_sect>
+        <enable_config_constraints>0</enable_config_constraints>
+        <CipherString/>
+        <Ciphersuites/>
+        <SignatureAlgorithms/>
+        <groups/>
+        <MinProtocol/>
+        <MinProtocol_DTLS/>
+      </general>
+    </trust>
+    <monit version="1.0.14" persisted_at="1770388644.70" description="Monit settings">
+      <general>
+        <enabled>0</enabled>
+        <interval>120</interval>
+        <startdelay>120</startdelay>
+        <mailserver>127.0.0.1</mailserver>
+        <port>25</port>
+        <username/>
+        <password/>
+        <ssl>0</ssl>
+        <sslversion>auto</sslversion>
+        <sslverify>1</sslverify>
+        <logfile/>
+        <statefile/>
+        <eventqueuePath/>
+        <eventqueueSlots/>
+        <httpdEnabled>0</httpdEnabled>
+        <httpdUsername>root</httpdUsername>
+        <httpdPassword/>
+        <httpdPort>2812</httpdPort>
+        <httpdAllow/>
+        <mmonitUrl/>
+        <mmonitTimeout>5</mmonitTimeout>
+        <mmonitRegisterCredentials>1</mmonitRegisterCredentials>
+      </general>
+      <alert uuid="8f807173-5b65-43c6-a77b-d736a4586913">
+        <enabled>0</enabled>
+        <recipient>root@localhost.local</recipient>
+        <noton>0</noton>
+        <events/>
+        <format/>
+        <reminder/>
+        <description/>
+      </alert>
+      <service uuid="136ac64d-ef0c-4ff3-8611-f322e2a9763d">
+        <enabled>1</enabled>
+        <name>$HOST</name>
+        <description/>
+        <type>system</type>
+        <pidfile/>
+        <match/>
+        <path/>
+        <timeout>300</timeout>
+        <starttimeout>30</starttimeout>
+        <address/>
+        <interface/>
+        <start/>
+        <stop/>
+        <tests>61360613-f7f9-43c5-8816-788bccb69ce8,fa80aa2d-228d-4428-b6f0-a746f6f0449c,13d22401-9a5c-4340-ba29-6d440b6f8a62,e0d2944d-5907-4b97-b112-74c8112fa4ab</tests>
+        <depends/>
+        <polltime/>
+      </service>
+      <service uuid="ff93cd24-99a2-45e4-98ea-d6e429d06a03">
+        <enabled>1</enabled>
+        <name>RootFs</name>
+        <description/>
+        <type>filesystem</type>
+        <pidfile/>
+        <match/>
+        <path>/</path>
+        <timeout>300</timeout>
+        <starttimeout>30</starttimeout>
+        <address/>
+        <interface/>
+        <start/>
+        <stop/>
+        <tests>84096fd7-1971-48cb-97b0-f9cc2d46f1bb</tests>
+        <depends/>
+        <polltime/>
+      </service>
+      <service uuid="5a2616d1-bdaa-42f1-9e15-bf1a024bfab9">
+        <enabled>0</enabled>
+        <name>carp_status_change</name>
+        <description/>
+        <type>custom</type>
+        <pidfile/>
+        <match/>
+        <path>/usr/local/opnsense/scripts/monit/carp_status.php</path>
+        <timeout>300</timeout>
+        <starttimeout>30</starttimeout>
+        <address/>
+        <interface/>
+        <start/>
+        <stop/>
+        <tests>c0ed9d5a-e808-4da5-ad47-0829bbdc247b</tests>
+        <depends/>
+        <polltime/>
+      </service>
+      <service uuid="bd3645f7-ed86-4975-a789-d92264d1d808">
+        <enabled>0</enabled>
+        <name>gateway_alert</name>
+        <description/>
+        <type>custom</type>
+        <pidfile/>
+        <match/>
+        <path>/usr/local/opnsense/scripts/monit/gateway_alert.php</path>
+        <timeout>300</timeout>
+        <starttimeout>30</starttimeout>
+        <address/>
+        <interface/>
+        <start/>
+        <stop/>
+        <tests>c753e78a-4b55-42d7-8e27-334084f5a46b</tests>
+        <depends/>
+        <polltime/>
+      </service>
+      <test uuid="ea4ed577-f21f-431c-adc0-8ac1149c0c61">
+        <name>Ping</name>
+        <type>NetworkPing</type>
+        <condition>failed ping</condition>
+        <action>alert</action>
+        <path/>
+      </test>
+      <test uuid="8f4a268c-4edd-4145-9530-e7717b7d799d">
+        <name>NetworkLink</name>
+        <type>NetworkInterface</type>
+        <condition>failed link</condition>
+        <action>alert</action>
+        <path/>
+      </test>
+      <test uuid="9ac4c5b1-96db-42d7-983a-9f2434a1a83c">
+        <name>NetworkSaturation</name>
+        <type>NetworkInterface</type>
+        <condition>saturation is greater than 75%</condition>
+        <action>alert</action>
+        <path/>
+      </test>
+      <test uuid="61360613-f7f9-43c5-8816-788bccb69ce8">
+        <name>MemoryUsage</name>
+        <type>SystemResource</type>
+        <condition>memory usage is greater than 75%</condition>
+        <action>alert</action>
+        <path/>
+      </test>
+      <test uuid="fa80aa2d-228d-4428-b6f0-a746f6f0449c">
+        <name>CPUUsage</name>
+        <type>SystemResource</type>
+        <condition>cpu usage is greater than 75%</condition>
+        <action>alert</action>
+        <path/>
+      </test>
+      <test uuid="13d22401-9a5c-4340-ba29-6d440b6f8a62">
+        <name>LoadAvg1</name>
+        <type>SystemResource</type>
+        <condition>loadavg (1min) is greater than 8</condition>
+        <action>alert</action>
+        <path/>
+      </test>
+      <test uuid="e0d2944d-5907-4b97-b112-74c8112fa4ab">
+        <name>LoadAvg5</name>
+        <type>SystemResource</type>
+        <condition>loadavg (5min) is greater than 6</condition>
+        <action>alert</action>
+        <path/>
+      </test>
+      <test uuid="21b5283f-fb50-49e4-b0d7-c7b876793512">
+        <name>LoadAvg15</name>
+        <type>SystemResource</type>
+        <condition>loadavg (15min) is greater than 4</condition>
+        <action>alert</action>
+        <path/>
+      </test>
+      <test uuid="84096fd7-1971-48cb-97b0-f9cc2d46f1bb">
+        <name>SpaceUsage</name>
+        <type>SpaceUsage</type>
+        <condition>space usage is greater than 75%</condition>
+        <action>alert</action>
+        <path/>
+      </test>
+      <test uuid="c0ed9d5a-e808-4da5-ad47-0829bbdc247b">
+        <name>ChangedStatus</name>
+        <type>ProgramStatus</type>
+        <condition>changed status</condition>
+        <action>alert</action>
+        <path/>
+      </test>
+      <test uuid="c753e78a-4b55-42d7-8e27-334084f5a46b">
+        <name>NonZeroStatus</name>
+        <type>ProgramStatus</type>
+        <condition>status != 0</condition>
+        <action>alert</action>
+        <path/>
+      </test>
+    </monit>
+    <Gateways version="1.0.0" persisted_at="1770388644.71" description="Gateways configuration">
+      <gateway_item uuid="fab360e1-4d5f-4125-a1e0-598f5d2725db">
+        <disabled>0</disabled>
+        <name>LAN_GW</name>
+        <descr/>
+        <interface>lan</interface>
+        <ipprotocol>inet</ipprotocol>
+        <gateway>yyy.yyy.yyy.yyy</gateway>
+        <defaultgw>0</defaultgw>
+        <fargw>0</fargw>
+        <monitor_disable>1</monitor_disable>
+        <monitor_noroute>0</monitor_noroute>
+        <monitor_killstates>0</monitor_killstates>
+        <monitor_killstates_priority>0</monitor_killstates_priority>
+        <monitor/>
+        <force_down>0</force_down>
+        <priority>255</priority>
+        <weight>1</weight>
+        <latencylow/>
+        <latencyhigh/>
+        <losslow/>
+        <losshigh/>
+        <interval/>
+        <time_period/>
+        <loss_interval/>
+        <data_length/>
+      </gateway_item>
+    </Gateways>
+    <OpenVPN version="1.0.1" persisted_at="1770388644.85" description="OpenVPN">
+      <Overwrites/>
+      <Instances/>
+      <StaticKeys/>
+    </OpenVPN>
+    <OpenVPNExport version="0.0.1" persisted_at="1770388644.86" description="OpenVPN export presets">
+      <servers/>
+    </OpenVPNExport>
+    <Kea>
+      <dhcp6 version="1.0.0" persisted_at="1770388645.11" description="Kea DHCPv6 configuration">
+        <general>
+          <enabled>0</enabled>
+          <manual_config>0</manual_config>
+          <interfaces/>
+          <valid_lifetime>4000</valid_lifetime>
+          <fwrules>1</fwrules>
+        </general>
+        <lexpire>
+          <hold_reclaimed_time/>
+          <reclaim_timer_wait_time/>
+          <flush_reclaimed_timer_wait_time/>
+          <max_reclaim_time/>
+          <max_reclaim_leases/>
+          <unwarned_reclaim_cycles/>
+        </lexpire>
+        <ha>
+          <enabled>0</enabled>
+          <this_server_name/>
+          <max_unacked_clients>2</max_unacked_clients>
+        </ha>
+        <subnets/>
+        <reservations/>
+        <pd_pools/>
+        <ha_peers/>
+      </dhcp6>
+      <dhcp4 version="1.0.4" persisted_at="1770388645.12" description="Kea DHCPv4 configuration">
+        <general>
+          <enabled>0</enabled>
+          <manual_config>0</manual_config>
+          <interfaces/>
+          <valid_lifetime>4000</valid_lifetime>
+          <fwrules>1</fwrules>
+          <dhcp_socket_type>raw</dhcp_socket_type>
+        </general>
+        <lexpire>
+          <hold_reclaimed_time/>
+          <reclaim_timer_wait_time/>
+          <flush_reclaimed_timer_wait_time/>
+          <max_reclaim_time/>
+          <max_reclaim_leases/>
+          <unwarned_reclaim_cycles/>
+        </lexpire>
+        <ha>
+          <enabled>0</enabled>
+          <this_server_name/>
+          <max_unacked_clients>2</max_unacked_clients>
+        </ha>
+        <subnets/>
+        <reservations/>
+        <ha_peers/>
+      </dhcp4>
+      <ctrl_agent version="0.0.1" persisted_at="1770388645.12" description="Kea Control Agent configuration">
+        <general>
+          <enabled>0</enabled>
+          <http_host>127.0.0.1</http_host>
+          <http_port>8000</http_port>
+        </general>
+      </ctrl_agent>
+    </Kea>
+    <quagga>
+      <ospf version="1.1.0" persisted_at="1770388645.12" description="OSPF Routing configuration">
+        <enabled>0</enabled>
+        <carp_demote>0</carp_demote>
+        <routerid/>
+        <costreference/>
+        <logadjacencychanges>0</logadjacencychanges>
+        <originate>0</originate>
+        <originatealways>0</originatealways>
+        <originatemetric/>
+        <passiveinterfaces/>
+        <areas/>
+        <networks/>
+        <neighbors/>
+        <interfaces/>
+        <prefixlists/>
+        <routemaps/>
+        <redistributions/>
+      </ospf>
+      <rip version="1.0.3" persisted_at="1770388645.12" description="RIP Routing configuration">
+        <enabled>0</enabled>
+        <version>2</version>
+        <networks/>
+        <passiveinterfaces/>
+        <redistribute/>
+        <defaultmetric/>
+      </rip>
+      <bgp version="1.1.1" persisted_at="1770388645.13" description="BGP Routing configuration">
+        <enabled>0</enabled>
+        <asnumber>65551</asnumber>
+        <distance/>
+        <routerid/>
+        <graceful>0</graceful>
+        <networkimportcheck>1</networkimportcheck>
+        <enforce_first_as>1</enforce_first_as>
+        <logneighborchanges>0</logneighborchanges>
+        <networks/>
+        <bestpath/>
+        <neighbors/>
+        <aspaths/>
+        <prefixlists/>
+        <communitylists/>
+        <routemaps/>
+        <peergroups/>
+        <redistributions/>
+      </bgp>
+      <static version="1.0.0" persisted_at="1770388645.13" description="Staticd Routing configuration">
+        <enabled>0</enabled>
+        <routes/>
+      </static>
+      <bfd version="1.0.2" persisted_at="1770388645.13" description="BFD configuration">
+        <enabled>0</enabled>
+        <neighbors/>
+      </bfd>
+      <general version="1.0.3" persisted_at="1770388645.13" description="Quagga Routing configuration">
+        <enabled>0</enabled>
+        <profile>traditional</profile>
+        <enablecarp>0</enablecarp>
+        <enablesyslog>1</enablesyslog>
+        <enablesnmp>0</enablesnmp>
+        <sysloglevel>notifications</sysloglevel>
+        <fwrules>1</fwrules>
+      </general>
+      <ospf6 version="1.1.0" persisted_at="1770388645.13" description="OSPFv3 Routing configuration">
+        <enabled>0</enabled>
+        <carp_demote>0</carp_demote>
+        <routerid/>
+        <originate>0</originate>
+        <originatealways>0</originatealways>
+        <originatemetric/>
+        <networks/>
+        <interfaces/>
+        <prefixlists/>
+        <routemaps/>
+        <redistributions/>
+      </ospf6>
+    </quagga>
+    <Hostwatch version="1.0.0" persisted_at="1770388645.13" description="Host discovery">
+      <general>
+        <enabled>1</enabled>
+        <promisc>0</promisc>
+        <verbose>0</verbose>
+        <skip_nets/>
+        <interface/>
+      </general>
+    </Hostwatch>
+    <unboundplus version="1.0.13" persisted_at="1770388645.27" description="Unbound configuration">
+      <general>
+        <enabled>1</enabled>
+        <port>53</port>
+        <stats>0</stats>
+        <active_interface/>
+        <dnssec>1</dnssec>
+        <dns64>0</dns64>
+        <dns64prefix/>
+        <noarecords>0</noarecords>
+        <regdhcp>0</regdhcp>
+        <regdhcpdomain/>
+        <regdhcpstatic>0</regdhcpstatic>
+        <noreglladdr6>0</noreglladdr6>
+        <noregrecords>0</noregrecords>
+        <txtsupport>0</txtsupport>
+        <cacheflush>0</cacheflush>
+        <safesearch>0</safesearch>
+        <local_zone_type>transparent</local_zone_type>
+        <outgoing_interface/>
+        <enable_wpad>0</enable_wpad>
+      </general>
+      <advanced>
+        <hideidentity>0</hideidentity>
+        <hideversion>0</hideversion>
+        <prefetch>0</prefetch>
+        <prefetchkey>0</prefetchkey>
+        <dnssecstripped>1</dnssecstripped>
+        <aggressivensec>1</aggressivensec>
+        <serveexpired>0</serveexpired>
+        <serveexpiredreplyttl/>
+        <serveexpiredttl/>
+        <serveexpiredttlreset>0</serveexpiredttlreset>
+        <serveexpiredclienttimeout/>
+        <qnameminstrict>0</qnameminstrict>
+        <extendedstatistics>0</extendedstatistics>
+        <logqueries>0</logqueries>
+        <logreplies>0</logreplies>
+        <logtagqueryreply>0</logtagqueryreply>
+        <logservfail>0</logservfail>
+        <loglocalactions>0</loglocalactions>
+        <logverbosity>1</logverbosity>
+        <valloglevel>0</valloglevel>
+        <privatedomain/>
+        <privateaddress>0.0.0.0/8,10.0.0.0/8,100.64.0.0/10,169.254.0.0/16,172.16.0.0/12,192.0.2.0/24,192.168.0.0/16,198.18.0.0/15,198.51.100.0/24,203.0.113.0/24,233.252.0.0/24,::1/128,2001:db8::/32,fc00::/8,fd00::/8,fe80::/10</privateaddress>
+        <insecuredomain/>
+        <msgcachesize/>
+        <rrsetcachesize/>
+        <outgoingnumtcp/>
+        <incomingnumtcp/>
+        <numqueriesperthread/>
+        <outgoingrange/>
+        <jostletimeout/>
+        <discardtimeout/>
+        <cachemaxttl/>
+        <cachemaxnegativettl/>
+        <cacheminttl/>
+        <infrahostttl/>
+        <infrakeepprobing>0</infrakeepprobing>
+        <infracachenumhosts/>
+        <unwantedreplythreshold/>
+      </advanced>
+      <acls>
+        <default_action>allow</default_action>
+      </acls>
+      <dnsbl/>
+      <forwarding>
+        <enabled>0</enabled>
+      </forwarding>
+      <dots/>
+      <hosts/>
+      <aliases/>
+    </unboundplus>
+    <wireguard>
+      <client version="1.0.0" persisted_at="1770388645.29" description="WireGuard peer configuration">
+        <clients/>
+      </client>
+      <server version="1.0.1" persisted_at="1770388645.29" description="WireGuard instance configuration">
+        <servers/>
+      </server>
+      <general version="0.0.1" persisted_at="1770388645.29" description="WireGuard configuration">
+        <enabled>0</enabled>
+      </general>
+    </wireguard>
   </OPNsense>
   <cert>
     <refid>598102500f355</refid>
@@ -657,17 +1292,66 @@
       <mode>hybrid</mode>
     </outbound>
   </nat>
-  <gateways>
-    <gateway_item>
-      <interface>lan</interface>
-      <gateway>yyy.yyy.yyy.yyy</gateway>
-      <name>LAN_GW</name>
-      <priority>255</priority>
-      <weight>1</weight>
-      <ipprotocol>inet</ipprotocol>
-      <interval/>
-      <descr/>
-      <monitor_disable>1</monitor_disable>
-    </gateway_item>
-  </gateways>
+  <gateways/>
+  <bridges version="1.0.0" persisted_at="1770388643.79" description="Bridge devices"/>
+  <vlans version="1.0.0" persisted_at="1770388643.83" description="VLAN configuration"/>
+  <gifs version="1.0.0" persisted_at="1770388643.84" description="GIF devices"/>
+  <gres version="1.0.0" persisted_at="1770388643.84" description="GRE devices"/>
+  <virtualip version="1.0.1" persisted_at="1770388643.84" description="Virtual IP configuration"/>
+  <laggs version="1.0.0" persisted_at="1770388643.88" description="LAGG devices"/>
+  <hasync version="1.0.2" persisted_at="1770388643.94" description="HA sync">
+    <disablepreempt>0</disablepreempt>
+    <disconnectppps>0</disconnectppps>
+    <pfsyncinterface/>
+    <pfsyncpeerip/>
+    <pfsyncversion>1400</pfsyncversion>
+    <pfsyncdefer>0</pfsyncdefer>
+    <synchronizetoip/>
+    <verifypeer>0</verifypeer>
+    <username/>
+    <password/>
+    <syncitems/>
+  </hasync>
+  <dnsmasq version="1.0.8" persisted_at="1770388644.85" description="Dnsmasq DNS and DHCP">
+    <enable>0</enable>
+    <regdhcp>0</regdhcp>
+    <regdhcpstatic>0</regdhcpstatic>
+    <dhcpfirst>0</dhcpfirst>
+    <strict_order>0</strict_order>
+    <domain_needed>0</domain_needed>
+    <no_private_reverse>0</no_private_reverse>
+    <no_resolv>0</no_resolv>
+    <log_queries>0</log_queries>
+    <no_hosts>0</no_hosts>
+    <strictbind>0</strictbind>
+    <dnssec>0</dnssec>
+    <regdhcpdomain/>
+    <interface/>
+    <port/>
+    <dns_forward_max/>
+    <cache_size/>
+    <local_ttl/>
+    <add_mac/>
+    <add_subnet>0</add_subnet>
+    <strip_subnet>0</strip_subnet>
+    <dhcp>
+      <no_interface/>
+      <fqdn>1</fqdn>
+      <domain/>
+      <local>1</local>
+      <lease_max/>
+      <authoritative>0</authoritative>
+      <default_fw_rules>1</default_fw_rules>
+      <reply_delay/>
+      <enable_ra>0</enable_ra>
+      <nosync>0</nosync>
+      <log_dhcp>0</log_dhcp>
+      <log_quiet>0</log_quiet>
+    </dhcp>
+    <no_ident>1</no_ident>
+  </dnsmasq>
+  <openvpn/>
+  <ifgroups version="1.0.0" persisted_at="1770388645.00" description="Firewall interface groups"/>
+  <staticroutes version="1.0.0" persisted_at="1770388645.27" description="Static routes"/>
+  <ca/>
 </opnsense>
